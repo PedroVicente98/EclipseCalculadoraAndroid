@@ -1,0 +1,100 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}" >
+    <TextView
+        android:id="@+id/textViewNúmero1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Número 1" />
+
+    <TextView
+        android:id="@+id/textViewNúmero2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editTextNumero1"
+        android:layout_below="@+id/editTextNumero1"
+        android:layout_marginTop="16dp"
+        android:text="Número 2" />
+
+    <EditText
+        android:id="@+id/editTextNumero2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewNúmero2"
+        android:layout_below="@+id/textViewNúmero2"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="number" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/editTextNumero1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewNúmero1"
+        android:layout_below="@+id/textViewNúmero1"
+        android:layout_marginTop="14dp"
+        android:ems="10"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/buttonSoma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/textViewNúmero2"
+        android:layout_below="@+id/editTextNumero2"
+        android:layout_marginTop="19dp"
+        android:text="+" />
+
+    <TextView
+        android:id="@+id/textViewResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editTextNumero2"
+        android:layout_below="@+id/buttonSoma"
+        android:layout_marginTop="102dp"
+        android:text="Resultado" />
+
+    <EditText
+        android:id="@+id/editTextResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewResultado"
+        android:layout_below="@+id/textViewResultado"
+        android:layout_marginTop="14dp"
+        android:ems="10" />
+
+    <Button
+        android:id="@+id/buttonSubtracao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/buttonSoma"
+        android:layout_toRightOf="@+id/buttonSoma"
+        android:text="-" />
+
+    <Button
+        android:id="@+id/buttonDivisao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/buttonSubtracao"
+        android:layout_toRightOf="@+id/buttonSubtracao"
+        android:text="/" />
+
+    <Button
+        android:id="@+id/buttonMultiplicacao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/buttonDivisao"
+        android:layout_alignBottom="@+id/buttonDivisao"
+        android:layout_toRightOf="@+id/buttonDivisao"
+        android:text="X" />
+   
+</RelativeLayout>
